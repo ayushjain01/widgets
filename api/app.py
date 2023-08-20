@@ -1,5 +1,5 @@
-from flask import Flask, request, Response, send_from_directory
-import generate_svg
+from flask import Flask, request, Response, send_file
+import generate_svg as generate_svg
 app = Flask(__name__)
 
 @app.route('/')
@@ -11,7 +11,7 @@ def get_svg():
     svg_content = generate_svg.make_widget(package_name)
     
     response = Response(svg_content, content_type='image/svg+xml')
-    
-    return send_file(f"{package_name}.svg", mimetype='image/svg+xml')
+    return response
+    # return send_file(f"{package_name}.svg", mimetype='image/svg+xml')
 if __name__ == '__main__':
     app.run(debug=True)
