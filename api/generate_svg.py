@@ -82,7 +82,7 @@ def trim_string(text, length):
         return format(text, f"^{length}")
 
 def make_widget(package_name):
-    with open('./Final.svg', 'r') as svg_file:
+    with open('https://github.com/ayushjain01/widgets/blob/main/api/Final.svg', 'r') as svg_file:
         svg_content = svg_file.read()
 
     soup = BeautifulSoup(svg_content, 'html')
