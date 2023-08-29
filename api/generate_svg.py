@@ -169,6 +169,6 @@ def make_widget(package_name):
         y = x.find("tspan")
         y.string = trim_string(license_name, 29)
 
-    with open(f'./{package_name}.svg', 'w') as svg_file:
-        svg_file.write(str(soup))
+    # with open(f'./{package_name}.svg', 'w') as svg_file:
+    #     svg_file.write(str(soup))
     return str(soup)
